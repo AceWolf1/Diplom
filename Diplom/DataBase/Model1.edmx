@@ -1,0 +1,3119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Chipset">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ClockSpeed">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TitleColor" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Conector">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ConectorCPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CoolingProcessor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypeCoolingID" Type="int" />
+          <Property Name="CoolerQuantity_SectionRadiator" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="CpuFamilyID">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="DataStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="InternalStorageID" Type="int" />
+          <Property Name="SpeedOfReadingID" Type="int" />
+          <Property Name="ConnectorID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.FormFactor" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="FormFactor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GenerationCPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="GPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="InternalStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ManufacturerGPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="MemoryBusWidth">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="int" />
+        </EntityType>
+        <EntityType Name="MotherBoard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypeOfMemoryID" Type="int" />
+          <Property Name="ChipsetID" Type="int" />
+          <Property Name="SocketID" Type="int" />
+          <Property Name="PCI-E_ID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="int" />
+          <Property Name="FormFactorID" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="PC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProcessorID" Type="int" />
+          <Property Name="MotherBoardID" Type="int" />
+          <Property Name="TowerPCID" Type="int" />
+          <Property Name="VideocardID" Type="int" />
+          <Property Name="CoolingProcessorID" Type="int" />
+          <Property Name="RamID" Type="int" />
+          <Property Name="DataStorageID" Type="int" />
+          <Property Name="PowerSupplyID" Type="int" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PCCost">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="PCID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PCI-E">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.Position" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Power">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PowerQuantity" Type="int" />
+        </EntityType>
+        <EntityType Name="PowerSupply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="PowerID" Type="int" />
+          <Property Name="ConectorCPUID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Processor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="SocketID" Type="int" Nullable="false" />
+          <Property Name="TypeOfMemoryID" Type="int" Nullable="false" />
+          <Property Name="CPUFamilyID" Type="int" Nullable="false" />
+          <Property Name="GraphicsCore" Type="bit" Nullable="false" />
+          <Property Name="ProcessorFrequencyID" Type="int" Nullable="false" />
+          <Property Name="GenerationCPUID" Type="int" />
+          <Property Name="QuantityCoreID" Type="int" Nullable="false" />
+          <Property Name="ManufacturerGPUID" Type="int" Nullable="false" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="EnergyConsumption" Type="int" Nullable="false" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="ProcessorFrequency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quantity" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="QuantityCore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Ram">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypeOfMemoryID" Type="int" />
+          <Property Name="QuantityRam" Type="int" />
+          <Property Name="ClockSpeedID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="PCID" Type="int" />
+          <Property Name="SaleDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Socket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SpeedOfReading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Speed" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TowerPC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="TypeTowerID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="ColorID" Type="int" />
+          <Property Name="FormFactorID" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TypeCooling">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TypeOfMemory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="TypeTower">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nickname" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="char" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="RegistrationDate" Type="datetime" />
+          <Property Name="PositionID" Type="int" />
+        </EntityType>
+        <EntityType Name="Videocard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="VideoRamID" Type="int" />
+          <Property Name="GPUID" Type="int" />
+          <Property Name="ManufacturerGPUID" Type="int" />
+          <Property Name="QuantityVentilator" Type="int" />
+          <Property Name="MemoryBusWidthID" Type="int" />
+          <Property Name="PCI-E_ID" Type="int" />
+          <Property Name="TypeOfMemoryID" Type="int" />
+          <Property Name="ManufacturerID" Type="int" />
+          <Property Name="Cost" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="int" />
+          <Property Name="PhotoLink" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="VideoRam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="int" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.configpc" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="configpc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="SaleDate" Type="datetime" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.configpc1" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="configpc1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="SaleDate" Type="datetime" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.configpc2" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="configpc2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="SaleDate" Type="datetime" />
+          <Property Name="Nickname" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.Info_Service" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Info_Service">
+          <Property Name="Nickname" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="Phone" Type="char" MaxLength="20" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.videocard_cost" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="videocard_cost">
+          <Property Name="cost" Type="varchar" MaxLength="18" />
+          <Property Name="count" Type="int" />
+        </EntityType>-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.videocard_cost1" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="videocard_cost1">
+          <Property Name="title" Type="varchar" MaxLength="18" />
+          <Property Name="count" Type="int" />
+        </EntityType>-->
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "ConfigPC_Subbotin_3ISP11-20.dbo.videocard_cost3" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="videocard_cost3">
+          <Property Name="title" Type="varchar" MaxLength="18" />
+        </EntityType>-->
+        <Association Name="FK_CoolingProcessor_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="CoolingProcessor" Type="Self.CoolingProcessor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CoolingProcessor">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CoolingProcessor_TypeCooling">
+          <End Role="TypeCooling" Type="Self.TypeCooling" Multiplicity="0..1" />
+          <End Role="CoolingProcessor" Type="Self.CoolingProcessor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeCooling">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CoolingProcessor">
+              <PropertyRef Name="TypeCoolingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_Connector">
+          <End Role="Conector" Type="Self.Conector" Multiplicity="0..1" />
+          <End Role="DataStorage" Type="Self.DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conector">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="ConnectorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_InternalStorage">
+          <End Role="InternalStorage" Type="Self.InternalStorage" Multiplicity="0..1" />
+          <End Role="DataStorage" Type="Self.DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InternalStorage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="InternalStorageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="DataStorage" Type="Self.DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_SpeedOfReading">
+          <End Role="SpeedOfReading" Type="Self.SpeedOfReading" Multiplicity="0..1" />
+          <End Role="DataStorage" Type="Self.DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpeedOfReading">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="SpeedOfReadingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormFactor_MotherBoard">
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="1" />
+          <End Role="FormFactor" Type="Self.FormFactor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MotherBoard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FormFactor">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormFactor_TowerPC">
+          <End Role="TowerPC" Type="Self.TowerPC" Multiplicity="1" />
+          <End Role="FormFactor" Type="Self.FormFactor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TowerPC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FormFactor">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_Chipset">
+          <End Role="Chipset" Type="Self.Chipset" Multiplicity="0..1" />
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chipset">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="ChipsetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_PCI-E">
+          <End Role="PCI-E" Type="Self.PCI-E" Multiplicity="0..1" />
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PCI-E">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="PCI-E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_Socket">
+          <End Role="Socket" Type="Self.Socket" Multiplicity="0..1" />
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Socket">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="SocketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_TypeOfMemory">
+          <End Role="TypeOfMemory" Type="Self.TypeOfMemory" Multiplicity="0..1" />
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_CoolingProcessor">
+          <End Role="CoolingProcessor" Type="Self.CoolingProcessor" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoolingProcessor">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="CoolingProcessorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_DataStorage">
+          <End Role="DataStorage" Type="Self.DataStorage" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DataStorage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="DataStorageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_MotherBoard">
+          <End Role="MotherBoard" Type="Self.MotherBoard" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotherBoard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="MotherBoardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_PowerSupply">
+          <End Role="PowerSupply" Type="Self.PowerSupply" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PowerSupply">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="PowerSupplyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Processor">
+          <End Role="Processor" Type="Self.Processor" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Processor">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="ProcessorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Ram">
+          <End Role="Ram" Type="Self.Ram" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ram">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="RamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_TowerPC">
+          <End Role="TowerPC" Type="Self.TowerPC" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TowerPC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="TowerPCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Videocard">
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="0..1" />
+          <End Role="PC" Type="Self.PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Videocard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="VideocardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PCCost_PC">
+          <End Role="PC" Type="Self.PC" Multiplicity="1" />
+          <End Role="PCCost" Type="Self.PCCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PCCost">
+              <PropertyRef Name="PCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Position_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Position" Type="Self.Position" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Position">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_ConectorCPU">
+          <End Role="ConectorCPU" Type="Self.ConectorCPU" Multiplicity="0..1" />
+          <End Role="PowerSupply" Type="Self.PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConectorCPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="ConectorCPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="PowerSupply" Type="Self.PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_Power">
+          <End Role="Power" Type="Self.Power" Multiplicity="0..1" />
+          <End Role="PowerSupply" Type="Self.PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Power">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="PowerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_CpuFamilyID">
+          <End Role="CpuFamilyID" Type="Self.CpuFamilyID" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CpuFamilyID">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="CPUFamilyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_GenerationCPU">
+          <End Role="GenerationCPU" Type="Self.GenerationCPU" Multiplicity="0..1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GenerationCPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="GenerationCPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_ManufacturerGPU">
+          <End Role="ManufacturerGPU" Type="Self.ManufacturerGPU" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerGPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="ManufacturerGPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_ProcessorFrequency">
+          <End Role="ProcessorFrequency" Type="Self.ProcessorFrequency" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProcessorFrequency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="ProcessorFrequencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_QuantityCore">
+          <End Role="QuantityCore" Type="Self.QuantityCore" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuantityCore">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="QuantityCoreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_Socket">
+          <End Role="Socket" Type="Self.Socket" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Socket">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="SocketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_TypeOfMemory">
+          <End Role="TypeOfMemory" Type="Self.TypeOfMemory" Multiplicity="1" />
+          <End Role="Processor" Type="Self.Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_ClockSpeed">
+          <End Role="ClockSpeed" Type="Self.ClockSpeed" Multiplicity="0..1" />
+          <End Role="Ram" Type="Self.Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClockSpeed">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="ClockSpeedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="Ram" Type="Self.Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_TypeOfMemory">
+          <End Role="TypeOfMemory" Type="Self.TypeOfMemory" Multiplicity="0..1" />
+          <End Role="Ram" Type="Self.Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_PC">
+          <End Role="PC" Type="Self.PC" Multiplicity="0..1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="PCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_User">
+          <End Role="User" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Service" Type="Self.Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_Color">
+          <End Role="Color" Type="Self.Color" Multiplicity="0..1" />
+          <End Role="TowerPC" Type="Self.TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="ColorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="TowerPC" Type="Self.TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_TypeTower">
+          <End Role="TypeTower" Type="Self.TypeTower" Multiplicity="0..1" />
+          <End Role="TowerPC" Type="Self.TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeTower">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="TypeTowerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_GPU">
+          <End Role="GPU" Type="Self.GPU" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="GPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_Manufacturer">
+          <End Role="Manufacturer" Type="Self.Manufacturer" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_ManufacturerGPU">
+          <End Role="ManufacturerGPU" Type="Self.ManufacturerGPU" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerGPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="ManufacturerGPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_MemoryBusWidth">
+          <End Role="MemoryBusWidth" Type="Self.MemoryBusWidth" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemoryBusWidth">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="MemoryBusWidthID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_PCI-E">
+          <End Role="PCI-E" Type="Self.PCI-E" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PCI-E">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="PCI-E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_TypeOfMemory">
+          <End Role="TypeOfMemory" Type="Self.TypeOfMemory" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_VideoRam">
+          <End Role="VideoRam" Type="Self.VideoRam" Multiplicity="0..1" />
+          <End Role="Videocard" Type="Self.Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VideoRam">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="VideoRamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="GetComponentsByCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoryName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="PR_InfoOnAssNum" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Sum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="Хранилище ModelContainer">
+          <EntitySet Name="Chipset" EntityType="Self.Chipset" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClockSpeed" EntityType="Self.ClockSpeed" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Conector" EntityType="Self.Conector" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConectorCPU" EntityType="Self.ConectorCPU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CoolingProcessor" EntityType="Self.CoolingProcessor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CpuFamilyID" EntityType="Self.CpuFamilyID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DataStorage" EntityType="Self.DataStorage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GenerationCPU" EntityType="Self.GenerationCPU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GPU" EntityType="Self.GPU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InternalStorage" EntityType="Self.InternalStorage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ManufacturerGPU" EntityType="Self.ManufacturerGPU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MemoryBusWidth" EntityType="Self.MemoryBusWidth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MotherBoard" EntityType="Self.MotherBoard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PC" EntityType="Self.PC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PCCost" EntityType="Self.PCCost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PCI-E" EntityType="Self.PCI-E" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Power" EntityType="Self.Power" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PowerSupply" EntityType="Self.PowerSupply" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Processor" EntityType="Self.Processor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProcessorFrequency" EntityType="Self.ProcessorFrequency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="QuantityCore" EntityType="Self.QuantityCore" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ram" EntityType="Self.Ram" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Socket" EntityType="Self.Socket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SpeedOfReading" EntityType="Self.SpeedOfReading" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TowerPC" EntityType="Self.TowerPC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeCooling" EntityType="Self.TypeCooling" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeOfMemory" EntityType="Self.TypeOfMemory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeTower" EntityType="Self.TypeTower" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Videocard" EntityType="Self.Videocard" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VideoRam" EntityType="Self.VideoRam" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormFactor" EntityType="Self.FormFactor" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FormFactor].[ID] AS [ID], 
+    [FormFactor].[Title] AS [Title]
+    FROM [dbo].[FormFactor] AS [FormFactor]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Position" EntityType="Self.Position" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Position].[ID] AS [ID], 
+    [Position].[Title] AS [Title]
+    FROM [dbo].[Position] AS [Position]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="configpc" EntityType="Self.configpc" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [configpc].[ID] AS [ID], 
+    [configpc].[Title] AS [Title], 
+    [configpc].[SaleDate] AS [SaleDate]
+    FROM [dbo].[configpc] AS [configpc]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="configpc1" EntityType="Self.configpc1" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [configpc1].[ID] AS [ID], 
+    [configpc1].[Title] AS [Title], 
+    [configpc1].[SaleDate] AS [SaleDate]
+    FROM [dbo].[configpc1] AS [configpc1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="configpc2" EntityType="Self.configpc2" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [configpc2].[ID] AS [ID], 
+    [configpc2].[Title] AS [Title], 
+    [configpc2].[SaleDate] AS [SaleDate], 
+    [configpc2].[Nickname] AS [Nickname]
+    FROM [dbo].[configpc2] AS [configpc2]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_CoolingProcessor_Manufacturer" Association="Self.FK_CoolingProcessor_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CoolingProcessor_TypeCooling" Association="Self.FK_CoolingProcessor_TypeCooling">
+            <End Role="TypeCooling" EntitySet="TypeCooling" />
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_Connector" Association="Self.FK_DataStorage_Connector">
+            <End Role="Conector" EntitySet="Conector" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_InternalStorage" Association="Self.FK_DataStorage_InternalStorage">
+            <End Role="InternalStorage" EntitySet="InternalStorage" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_Manufacturer" Association="Self.FK_DataStorage_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_SpeedOfReading" Association="Self.FK_DataStorage_SpeedOfReading">
+            <End Role="SpeedOfReading" EntitySet="SpeedOfReading" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormFactor_MotherBoard" Association="Self.FK_FormFactor_MotherBoard">
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+            <End Role="FormFactor" EntitySet="FormFactor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormFactor_TowerPC" Association="Self.FK_FormFactor_TowerPC">
+            <End Role="TowerPC" EntitySet="TowerPC" />
+            <End Role="FormFactor" EntitySet="FormFactor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_Chipset" Association="Self.FK_MotherBoard_Chipset">
+            <End Role="Chipset" EntitySet="Chipset" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_Manufacturer" Association="Self.FK_MotherBoard_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_PCI-E" Association="Self.FK_MotherBoard_PCI-E">
+            <End Role="PCI-E" EntitySet="PCI-E" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_Socket" Association="Self.FK_MotherBoard_Socket">
+            <End Role="Socket" EntitySet="Socket" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_TypeOfMemory" Association="Self.FK_MotherBoard_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_CoolingProcessor" Association="Self.FK_PC_CoolingProcessor">
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_DataStorage" Association="Self.FK_PC_DataStorage">
+            <End Role="DataStorage" EntitySet="DataStorage" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_MotherBoard" Association="Self.FK_PC_MotherBoard">
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_PowerSupply" Association="Self.FK_PC_PowerSupply">
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Processor" Association="Self.FK_PC_Processor">
+            <End Role="Processor" EntitySet="Processor" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Ram" Association="Self.FK_PC_Ram">
+            <End Role="Ram" EntitySet="Ram" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_TowerPC" Association="Self.FK_PC_TowerPC">
+            <End Role="TowerPC" EntitySet="TowerPC" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Videocard" Association="Self.FK_PC_Videocard">
+            <End Role="Videocard" EntitySet="Videocard" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PCCost_PC" Association="Self.FK_PCCost_PC">
+            <End Role="PC" EntitySet="PC" />
+            <End Role="PCCost" EntitySet="PCCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Position_User" Association="Self.FK_Position_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Position" EntitySet="Position" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_ConectorCPU" Association="Self.FK_PowerSupply_ConectorCPU">
+            <End Role="ConectorCPU" EntitySet="ConectorCPU" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_Manufacturer" Association="Self.FK_PowerSupply_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_Power" Association="Self.FK_PowerSupply_Power">
+            <End Role="Power" EntitySet="Power" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_CpuFamilyID" Association="Self.FK_Processor_CpuFamilyID">
+            <End Role="CpuFamilyID" EntitySet="CpuFamilyID" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_GenerationCPU" Association="Self.FK_Processor_GenerationCPU">
+            <End Role="GenerationCPU" EntitySet="GenerationCPU" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_ManufacturerGPU" Association="Self.FK_Processor_ManufacturerGPU">
+            <End Role="ManufacturerGPU" EntitySet="ManufacturerGPU" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_ProcessorFrequency" Association="Self.FK_Processor_ProcessorFrequency">
+            <End Role="ProcessorFrequency" EntitySet="ProcessorFrequency" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_QuantityCore" Association="Self.FK_Processor_QuantityCore">
+            <End Role="QuantityCore" EntitySet="QuantityCore" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_Socket" Association="Self.FK_Processor_Socket">
+            <End Role="Socket" EntitySet="Socket" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_TypeOfMemory" Association="Self.FK_Processor_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_ClockSpeed" Association="Self.FK_Ram_ClockSpeed">
+            <End Role="ClockSpeed" EntitySet="ClockSpeed" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_Manufacturer" Association="Self.FK_Ram_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_TypeOfMemory" Association="Self.FK_Ram_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_PC" Association="Self.FK_Service_PC">
+            <End Role="PC" EntitySet="PC" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_User" Association="Self.FK_Service_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_Color" Association="Self.FK_TowerPC_Color">
+            <End Role="Color" EntitySet="Color" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_Manufacturer" Association="Self.FK_TowerPC_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_TypeTower" Association="Self.FK_TowerPC_TypeTower">
+            <End Role="TypeTower" EntitySet="TypeTower" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_GPU" Association="Self.FK_Videocard_GPU">
+            <End Role="GPU" EntitySet="GPU" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_Manufacturer" Association="Self.FK_Videocard_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_ManufacturerGPU" Association="Self.FK_Videocard_ManufacturerGPU">
+            <End Role="ManufacturerGPU" EntitySet="ManufacturerGPU" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_MemoryBusWidth" Association="Self.FK_Videocard_MemoryBusWidth">
+            <End Role="MemoryBusWidth" EntitySet="MemoryBusWidth" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_PCI-E" Association="Self.FK_Videocard_PCI-E">
+            <End Role="PCI-E" EntitySet="PCI-E" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_TypeOfMemory" Association="Self.FK_Videocard_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_VideoRam" Association="Self.FK_Videocard_VideoRam">
+            <End Role="VideoRam" EntitySet="VideoRam" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetComponentsByCategory" ReturnType="Collection(Model.GetComponentsByCategory_Result)">
+          <Parameter Name="CategoryName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PR_InfoOnAssNum" ReturnType="Collection(Model.PR_InfoOnAssNum_Result)">
+          <Parameter Name="Sum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="Chipset" EntityType="Model.Chipset" />
+          <EntitySet Name="ClockSpeed" EntityType="Model.ClockSpeed" />
+          <EntitySet Name="Color" EntityType="Model.Color" />
+          <EntitySet Name="Conector" EntityType="Model.Conector" />
+          <EntitySet Name="ConectorCPU" EntityType="Model.ConectorCPU" />
+          <EntitySet Name="CoolingProcessor" EntityType="Model.CoolingProcessor" />
+          <EntitySet Name="CpuFamilyID" EntityType="Model.CpuFamilyID" />
+          <EntitySet Name="DataStorage" EntityType="Model.DataStorage" />
+          <EntitySet Name="GenerationCPU" EntityType="Model.GenerationCPU" />
+          <EntitySet Name="GPU" EntityType="Model.GPU" />
+          <EntitySet Name="InternalStorage" EntityType="Model.InternalStorage" />
+          <EntitySet Name="Manufacturer" EntityType="Model.Manufacturer" />
+          <EntitySet Name="ManufacturerGPU" EntityType="Model.ManufacturerGPU" />
+          <EntitySet Name="MemoryBusWidth" EntityType="Model.MemoryBusWidth" />
+          <EntitySet Name="MotherBoard" EntityType="Model.MotherBoard" />
+          <EntitySet Name="PC" EntityType="Model.PC" />
+          <EntitySet Name="PCCost" EntityType="Model.PCCost" />
+          <EntitySet Name="PCI_E" EntityType="Model.PCI_E" />
+          <EntitySet Name="Power" EntityType="Model.Power" />
+          <EntitySet Name="PowerSupply" EntityType="Model.PowerSupply" />
+          <EntitySet Name="Processor" EntityType="Model.Processor" />
+          <EntitySet Name="ProcessorFrequency" EntityType="Model.ProcessorFrequency" />
+          <EntitySet Name="QuantityCore" EntityType="Model.QuantityCore" />
+          <EntitySet Name="Ram" EntityType="Model.Ram" />
+          <EntitySet Name="Service" EntityType="Model.Service" />
+          <EntitySet Name="Socket" EntityType="Model.Socket" />
+          <EntitySet Name="SpeedOfReading" EntityType="Model.SpeedOfReading" />
+          <EntitySet Name="sysdiagrams" EntityType="Model.sysdiagrams" />
+          <EntitySet Name="TowerPC" EntityType="Model.TowerPC" />
+          <EntitySet Name="TypeCooling" EntityType="Model.TypeCooling" />
+          <EntitySet Name="TypeOfMemory" EntityType="Model.TypeOfMemory" />
+          <EntitySet Name="TypeTower" EntityType="Model.TypeTower" />
+          <EntitySet Name="User" EntityType="Model.User" />
+          <EntitySet Name="Videocard" EntityType="Model.Videocard" />
+          <EntitySet Name="VideoRam" EntityType="Model.VideoRam" />
+          <EntitySet Name="FormFactor" EntityType="Model.FormFactor" />
+          <EntitySet Name="Position" EntityType="Model.Position" />
+          <EntitySet Name="configpc" EntityType="Model.configpc" />
+          <EntitySet Name="configpc1" EntityType="Model.configpc1" />
+          <EntitySet Name="configpc2" EntityType="Model.configpc2" />
+          <AssociationSet Name="FK_MotherBoard_Chipset" Association="Model.FK_MotherBoard_Chipset">
+            <End Role="Chipset" EntitySet="Chipset" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_ClockSpeed" Association="Model.FK_Ram_ClockSpeed">
+            <End Role="ClockSpeed" EntitySet="ClockSpeed" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_Color" Association="Model.FK_TowerPC_Color">
+            <End Role="Color" EntitySet="Color" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_Connector" Association="Model.FK_DataStorage_Connector">
+            <End Role="Conector" EntitySet="Conector" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_ConectorCPU" Association="Model.FK_PowerSupply_ConectorCPU">
+            <End Role="ConectorCPU" EntitySet="ConectorCPU" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CoolingProcessor_Manufacturer" Association="Model.FK_CoolingProcessor_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CoolingProcessor_TypeCooling" Association="Model.FK_CoolingProcessor_TypeCooling">
+            <End Role="TypeCooling" EntitySet="TypeCooling" />
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_CoolingProcessor" Association="Model.FK_PC_CoolingProcessor">
+            <End Role="CoolingProcessor" EntitySet="CoolingProcessor" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_CpuFamilyID" Association="Model.FK_Processor_CpuFamilyID">
+            <End Role="CpuFamilyID" EntitySet="CpuFamilyID" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_InternalStorage" Association="Model.FK_DataStorage_InternalStorage">
+            <End Role="InternalStorage" EntitySet="InternalStorage" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_Manufacturer" Association="Model.FK_DataStorage_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DataStorage_SpeedOfReading" Association="Model.FK_DataStorage_SpeedOfReading">
+            <End Role="SpeedOfReading" EntitySet="SpeedOfReading" />
+            <End Role="DataStorage" EntitySet="DataStorage" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_DataStorage" Association="Model.FK_PC_DataStorage">
+            <End Role="DataStorage" EntitySet="DataStorage" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_GenerationCPU" Association="Model.FK_Processor_GenerationCPU">
+            <End Role="GenerationCPU" EntitySet="GenerationCPU" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_GPU" Association="Model.FK_Videocard_GPU">
+            <End Role="GPU" EntitySet="GPU" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_Manufacturer" Association="Model.FK_MotherBoard_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_Manufacturer" Association="Model.FK_PowerSupply_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_Manufacturer" Association="Model.FK_Ram_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_Manufacturer" Association="Model.FK_TowerPC_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_Manufacturer" Association="Model.FK_Videocard_Manufacturer">
+            <End Role="Manufacturer" EntitySet="Manufacturer" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_ManufacturerGPU" Association="Model.FK_Processor_ManufacturerGPU">
+            <End Role="ManufacturerGPU" EntitySet="ManufacturerGPU" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_ManufacturerGPU" Association="Model.FK_Videocard_ManufacturerGPU">
+            <End Role="ManufacturerGPU" EntitySet="ManufacturerGPU" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_MemoryBusWidth" Association="Model.FK_Videocard_MemoryBusWidth">
+            <End Role="MemoryBusWidth" EntitySet="MemoryBusWidth" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormFactor_MotherBoard" Association="Model.FK_FormFactor_MotherBoard">
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+            <End Role="FormFactor" EntitySet="FormFactor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_PCI_E" Association="Model.FK_MotherBoard_PCI_E">
+            <End Role="PCI_E" EntitySet="PCI_E" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_Socket" Association="Model.FK_MotherBoard_Socket">
+            <End Role="Socket" EntitySet="Socket" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MotherBoard_TypeOfMemory" Association="Model.FK_MotherBoard_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_MotherBoard" Association="Model.FK_PC_MotherBoard">
+            <End Role="MotherBoard" EntitySet="MotherBoard" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_PowerSupply" Association="Model.FK_PC_PowerSupply">
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Processor" Association="Model.FK_PC_Processor">
+            <End Role="Processor" EntitySet="Processor" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Ram" Association="Model.FK_PC_Ram">
+            <End Role="Ram" EntitySet="Ram" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_TowerPC" Association="Model.FK_PC_TowerPC">
+            <End Role="TowerPC" EntitySet="TowerPC" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PC_Videocard" Association="Model.FK_PC_Videocard">
+            <End Role="Videocard" EntitySet="Videocard" />
+            <End Role="PC" EntitySet="PC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PCCost_PC" Association="Model.FK_PCCost_PC">
+            <End Role="PC" EntitySet="PC" />
+            <End Role="PCCost" EntitySet="PCCost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_PC" Association="Model.FK_Service_PC">
+            <End Role="PC" EntitySet="PC" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_PCI_E" Association="Model.FK_Videocard_PCI_E">
+            <End Role="PCI_E" EntitySet="PCI_E" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PowerSupply_Power" Association="Model.FK_PowerSupply_Power">
+            <End Role="Power" EntitySet="Power" />
+            <End Role="PowerSupply" EntitySet="PowerSupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_ProcessorFrequency" Association="Model.FK_Processor_ProcessorFrequency">
+            <End Role="ProcessorFrequency" EntitySet="ProcessorFrequency" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_QuantityCore" Association="Model.FK_Processor_QuantityCore">
+            <End Role="QuantityCore" EntitySet="QuantityCore" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_Socket" Association="Model.FK_Processor_Socket">
+            <End Role="Socket" EntitySet="Socket" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Processor_TypeOfMemory" Association="Model.FK_Processor_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Processor" EntitySet="Processor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ram_TypeOfMemory" Association="Model.FK_Ram_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Ram" EntitySet="Ram" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Service_User" Association="Model.FK_Service_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Service" EntitySet="Service" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FormFactor_TowerPC" Association="Model.FK_FormFactor_TowerPC">
+            <End Role="TowerPC" EntitySet="TowerPC" />
+            <End Role="FormFactor" EntitySet="FormFactor" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TowerPC_TypeTower" Association="Model.FK_TowerPC_TypeTower">
+            <End Role="TypeTower" EntitySet="TypeTower" />
+            <End Role="TowerPC" EntitySet="TowerPC" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_TypeOfMemory" Association="Model.FK_Videocard_TypeOfMemory">
+            <End Role="TypeOfMemory" EntitySet="TypeOfMemory" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Position_User" Association="Model.FK_Position_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Position" EntitySet="Position" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videocard_VideoRam" Association="Model.FK_Videocard_VideoRam">
+            <End Role="VideoRam" EntitySet="VideoRam" />
+            <End Role="Videocard" EntitySet="Videocard" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="GetComponentsByCategory_Result">
+          <Property Type="String" Name="Assembly" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Processor" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="MotherBoard" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Tower" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Videocard" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CoolingProcessor" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Ram" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DataStorage" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PowerSupply" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="PR_InfoOnAssNum_Result">
+          <Property Type="String" Name="Assembly" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Processor" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="MotherBoard" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Tower" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Videocard" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="CoolingProcessor" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Ram" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="DataStorage" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="PowerSupply" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Chipset">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_MotherBoard_Chipset" FromRole="Chipset" ToRole="MotherBoard" />
+        </EntityType>
+        <EntityType Name="ClockSpeed">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Ram" Relationship="Model.FK_Ram_ClockSpeed" FromRole="ClockSpeed" ToRole="Ram" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TitleColor" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TowerPC" Relationship="Model.FK_TowerPC_Color" FromRole="Color" ToRole="TowerPC" />
+        </EntityType>
+        <EntityType Name="Conector">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DataStorage" Relationship="Model.FK_DataStorage_Connector" FromRole="Conector" ToRole="DataStorage" />
+        </EntityType>
+        <EntityType Name="ConectorCPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PowerSupply" Relationship="Model.FK_PowerSupply_ConectorCPU" FromRole="ConectorCPU" ToRole="PowerSupply" />
+        </EntityType>
+        <EntityType Name="CoolingProcessor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TypeCoolingID" Type="Int32" />
+          <Property Name="CoolerQuantity_SectionRadiator" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_CoolingProcessor_Manufacturer" FromRole="CoolingProcessor" ToRole="Manufacturer" />
+          <NavigationProperty Name="TypeCooling" Relationship="Model.FK_CoolingProcessor_TypeCooling" FromRole="CoolingProcessor" ToRole="TypeCooling" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_CoolingProcessor" FromRole="CoolingProcessor" ToRole="PC" />
+        </EntityType>
+        <EntityType Name="CpuFamilyID">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_CpuFamilyID" FromRole="CpuFamilyID" ToRole="Processor" />
+        </EntityType>
+        <EntityType Name="DataStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="InternalStorageID" Type="Int32" />
+          <Property Name="SpeedOfReadingID" Type="Int32" />
+          <Property Name="ConnectorID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Conector" Relationship="Model.FK_DataStorage_Connector" FromRole="DataStorage" ToRole="Conector" />
+          <NavigationProperty Name="InternalStorage" Relationship="Model.FK_DataStorage_InternalStorage" FromRole="DataStorage" ToRole="InternalStorage" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_DataStorage_Manufacturer" FromRole="DataStorage" ToRole="Manufacturer" />
+          <NavigationProperty Name="SpeedOfReading" Relationship="Model.FK_DataStorage_SpeedOfReading" FromRole="DataStorage" ToRole="SpeedOfReading" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_DataStorage" FromRole="DataStorage" ToRole="PC" />
+        </EntityType>
+        <EntityType Name="GenerationCPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_GenerationCPU" FromRole="GenerationCPU" ToRole="Processor" />
+        </EntityType>
+        <EntityType Name="GPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_GPU" FromRole="GPU" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="InternalStorage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="Int32" />
+          <NavigationProperty Name="DataStorage" Relationship="Model.FK_DataStorage_InternalStorage" FromRole="InternalStorage" ToRole="DataStorage" />
+        </EntityType>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CoolingProcessor" Relationship="Model.FK_CoolingProcessor_Manufacturer" FromRole="Manufacturer" ToRole="CoolingProcessor" />
+          <NavigationProperty Name="DataStorage" Relationship="Model.FK_DataStorage_Manufacturer" FromRole="Manufacturer" ToRole="DataStorage" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_MotherBoard_Manufacturer" FromRole="Manufacturer" ToRole="MotherBoard" />
+          <NavigationProperty Name="PowerSupply" Relationship="Model.FK_PowerSupply_Manufacturer" FromRole="Manufacturer" ToRole="PowerSupply" />
+          <NavigationProperty Name="Ram" Relationship="Model.FK_Ram_Manufacturer" FromRole="Manufacturer" ToRole="Ram" />
+          <NavigationProperty Name="TowerPC" Relationship="Model.FK_TowerPC_Manufacturer" FromRole="Manufacturer" ToRole="TowerPC" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_Manufacturer" FromRole="Manufacturer" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="ManufacturerGPU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_ManufacturerGPU" FromRole="ManufacturerGPU" ToRole="Processor" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_ManufacturerGPU" FromRole="ManufacturerGPU" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="MemoryBusWidth">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="Int32" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_MemoryBusWidth" FromRole="MemoryBusWidth" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="MotherBoard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfMemoryID" Type="Int32" />
+          <Property Name="ChipsetID" Type="Int32" />
+          <Property Name="SocketID" Type="Int32" />
+          <Property Name="PCI_E_ID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" />
+          <Property Name="FormFactorID" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Chipset" Relationship="Model.FK_MotherBoard_Chipset" FromRole="MotherBoard" ToRole="Chipset" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_MotherBoard_Manufacturer" FromRole="MotherBoard" ToRole="Manufacturer" />
+          <NavigationProperty Name="FormFactor" Relationship="Model.FK_FormFactor_MotherBoard" FromRole="MotherBoard" ToRole="FormFactor" />
+          <NavigationProperty Name="PCI_E" Relationship="Model.FK_MotherBoard_PCI_E" FromRole="MotherBoard" ToRole="PCI_E" />
+          <NavigationProperty Name="Socket" Relationship="Model.FK_MotherBoard_Socket" FromRole="MotherBoard" ToRole="Socket" />
+          <NavigationProperty Name="TypeOfMemory" Relationship="Model.FK_MotherBoard_TypeOfMemory" FromRole="MotherBoard" ToRole="TypeOfMemory" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_MotherBoard" FromRole="MotherBoard" ToRole="PC" />
+        </EntityType>
+        <EntityType Name="PC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ProcessorID" Type="Int32" />
+          <Property Name="MotherBoardID" Type="Int32" />
+          <Property Name="TowerPCID" Type="Int32" />
+          <Property Name="VideocardID" Type="Int32" />
+          <Property Name="CoolingProcessorID" Type="Int32" />
+          <Property Name="RamID" Type="Int32" />
+          <Property Name="DataStorageID" Type="Int32" />
+          <Property Name="PowerSupplyID" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CoolingProcessor" Relationship="Model.FK_PC_CoolingProcessor" FromRole="PC" ToRole="CoolingProcessor" />
+          <NavigationProperty Name="DataStorage" Relationship="Model.FK_PC_DataStorage" FromRole="PC" ToRole="DataStorage" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_PC_MotherBoard" FromRole="PC" ToRole="MotherBoard" />
+          <NavigationProperty Name="PowerSupply" Relationship="Model.FK_PC_PowerSupply" FromRole="PC" ToRole="PowerSupply" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_PC_Processor" FromRole="PC" ToRole="Processor" />
+          <NavigationProperty Name="Ram" Relationship="Model.FK_PC_Ram" FromRole="PC" ToRole="Ram" />
+          <NavigationProperty Name="TowerPC" Relationship="Model.FK_PC_TowerPC" FromRole="PC" ToRole="TowerPC" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_PC_Videocard" FromRole="PC" ToRole="Videocard" />
+          <NavigationProperty Name="PCCost" Relationship="Model.FK_PCCost_PC" FromRole="PC" ToRole="PCCost" />
+          <NavigationProperty Name="Service" Relationship="Model.FK_Service_PC" FromRole="PC" ToRole="Service" />
+        </EntityType>
+        <EntityType Name="PCCost">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="PCID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PCCost_PC" FromRole="PCCost" ToRole="PC" />
+        </EntityType>
+        <EntityType Name="PCI_E">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_MotherBoard_PCI_E" FromRole="PCI_E" ToRole="MotherBoard" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_PCI_E" FromRole="PCI_E" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="Power">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PowerQuantity" Type="Int32" />
+          <NavigationProperty Name="PowerSupply" Relationship="Model.FK_PowerSupply_Power" FromRole="Power" ToRole="PowerSupply" />
+        </EntityType>
+        <EntityType Name="PowerSupply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PowerID" Type="Int32" />
+          <Property Name="ConectorCPUID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ConectorCPU" Relationship="Model.FK_PowerSupply_ConectorCPU" FromRole="PowerSupply" ToRole="ConectorCPU" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_PowerSupply_Manufacturer" FromRole="PowerSupply" ToRole="Manufacturer" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_PowerSupply" FromRole="PowerSupply" ToRole="PC" />
+          <NavigationProperty Name="Power" Relationship="Model.FK_PowerSupply_Power" FromRole="PowerSupply" ToRole="Power" />
+        </EntityType>
+        <EntityType Name="Processor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SocketID" Type="Int32" Nullable="false" />
+          <Property Name="TypeOfMemoryID" Type="Int32" Nullable="false" />
+          <Property Name="CPUFamilyID" Type="Int32" Nullable="false" />
+          <Property Name="GraphicsCore" Type="Boolean" Nullable="false" />
+          <Property Name="ProcessorFrequencyID" Type="Int32" Nullable="false" />
+          <Property Name="GenerationCPUID" Type="Int32" />
+          <Property Name="QuantityCoreID" Type="Int32" Nullable="false" />
+          <Property Name="ManufacturerGPUID" Type="Int32" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" Nullable="false" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CpuFamilyID1" Relationship="Model.FK_Processor_CpuFamilyID" FromRole="Processor" ToRole="CpuFamilyID" />
+          <NavigationProperty Name="GenerationCPU" Relationship="Model.FK_Processor_GenerationCPU" FromRole="Processor" ToRole="GenerationCPU" />
+          <NavigationProperty Name="ManufacturerGPU" Relationship="Model.FK_Processor_ManufacturerGPU" FromRole="Processor" ToRole="ManufacturerGPU" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_Processor" FromRole="Processor" ToRole="PC" />
+          <NavigationProperty Name="ProcessorFrequency" Relationship="Model.FK_Processor_ProcessorFrequency" FromRole="Processor" ToRole="ProcessorFrequency" />
+          <NavigationProperty Name="QuantityCore" Relationship="Model.FK_Processor_QuantityCore" FromRole="Processor" ToRole="QuantityCore" />
+          <NavigationProperty Name="Socket" Relationship="Model.FK_Processor_Socket" FromRole="Processor" ToRole="Socket" />
+          <NavigationProperty Name="TypeOfMemory" Relationship="Model.FK_Processor_TypeOfMemory" FromRole="Processor" ToRole="TypeOfMemory" />
+        </EntityType>
+        <EntityType Name="ProcessorFrequency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_ProcessorFrequency" FromRole="ProcessorFrequency" ToRole="Processor" />
+        </EntityType>
+        <EntityType Name="QuantityCore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Quantity" Type="Int32" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_QuantityCore" FromRole="QuantityCore" ToRole="Processor" />
+        </EntityType>
+        <EntityType Name="Ram">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TypeOfMemoryID" Type="Int32" />
+          <Property Name="QuantityRam" Type="Int32" />
+          <Property Name="ClockSpeedID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="ClockSpeed" Relationship="Model.FK_Ram_ClockSpeed" FromRole="Ram" ToRole="ClockSpeed" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_Ram_Manufacturer" FromRole="Ram" ToRole="Manufacturer" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_Ram" FromRole="Ram" ToRole="PC" />
+          <NavigationProperty Name="TypeOfMemory" Relationship="Model.FK_Ram_TypeOfMemory" FromRole="Ram" ToRole="TypeOfMemory" />
+        </EntityType>
+        <EntityType Name="Service">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="PCID" Type="Int32" />
+          <Property Name="SaleDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_Service_PC" FromRole="Service" ToRole="PC" />
+          <NavigationProperty Name="User" Relationship="Model.FK_Service_User" FromRole="Service" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Socket">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_MotherBoard_Socket" FromRole="Socket" ToRole="MotherBoard" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_Socket" FromRole="Socket" ToRole="Processor" />
+        </EntityType>
+        <EntityType Name="SpeedOfReading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Speed" Type="Int32" />
+          <NavigationProperty Name="DataStorage" Relationship="Model.FK_DataStorage_SpeedOfReading" FromRole="SpeedOfReading" ToRole="DataStorage" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TowerPC">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TypeTowerID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="ColorID" Type="Int32" />
+          <Property Name="FormFactorID" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Color" Relationship="Model.FK_TowerPC_Color" FromRole="TowerPC" ToRole="Color" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_TowerPC_Manufacturer" FromRole="TowerPC" ToRole="Manufacturer" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_TowerPC" FromRole="TowerPC" ToRole="PC" />
+          <NavigationProperty Name="FormFactor" Relationship="Model.FK_FormFactor_TowerPC" FromRole="TowerPC" ToRole="FormFactor" />
+          <NavigationProperty Name="TypeTower" Relationship="Model.FK_TowerPC_TypeTower" FromRole="TowerPC" ToRole="TypeTower" />
+        </EntityType>
+        <EntityType Name="TypeCooling">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CoolingProcessor" Relationship="Model.FK_CoolingProcessor_TypeCooling" FromRole="TypeCooling" ToRole="CoolingProcessor" />
+        </EntityType>
+        <EntityType Name="TypeOfMemory">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_MotherBoard_TypeOfMemory" FromRole="TypeOfMemory" ToRole="MotherBoard" />
+          <NavigationProperty Name="Processor" Relationship="Model.FK_Processor_TypeOfMemory" FromRole="TypeOfMemory" ToRole="Processor" />
+          <NavigationProperty Name="Ram" Relationship="Model.FK_Ram_TypeOfMemory" FromRole="TypeOfMemory" ToRole="Ram" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_TypeOfMemory" FromRole="TypeOfMemory" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="TypeTower">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="TowerPC" Relationship="Model.FK_TowerPC_TypeTower" FromRole="TypeTower" ToRole="TowerPC" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nickname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="RegistrationDate" Type="DateTime" Precision="3" />
+          <Property Name="PositionID" Type="Int32" />
+          <NavigationProperty Name="Service" Relationship="Model.FK_Service_User" FromRole="User" ToRole="Service" />
+          <NavigationProperty Name="Position" Relationship="Model.FK_Position_User" FromRole="User" ToRole="Position" />
+        </EntityType>
+        <EntityType Name="Videocard">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VideoRamID" Type="Int32" />
+          <Property Name="GPUID" Type="Int32" />
+          <Property Name="ManufacturerGPUID" Type="Int32" />
+          <Property Name="QuantityVentilator" Type="Int32" />
+          <Property Name="MemoryBusWidthID" Type="Int32" />
+          <Property Name="PCI_E_ID" Type="Int32" />
+          <Property Name="TypeOfMemoryID" Type="Int32" />
+          <Property Name="ManufacturerID" Type="Int32" />
+          <Property Name="Cost" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="EnergyConsumption" Type="Int32" />
+          <Property Name="PhotoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="GPU" Relationship="Model.FK_Videocard_GPU" FromRole="Videocard" ToRole="GPU" />
+          <NavigationProperty Name="Manufacturer" Relationship="Model.FK_Videocard_Manufacturer" FromRole="Videocard" ToRole="Manufacturer" />
+          <NavigationProperty Name="ManufacturerGPU" Relationship="Model.FK_Videocard_ManufacturerGPU" FromRole="Videocard" ToRole="ManufacturerGPU" />
+          <NavigationProperty Name="MemoryBusWidth" Relationship="Model.FK_Videocard_MemoryBusWidth" FromRole="Videocard" ToRole="MemoryBusWidth" />
+          <NavigationProperty Name="PC" Relationship="Model.FK_PC_Videocard" FromRole="Videocard" ToRole="PC" />
+          <NavigationProperty Name="PCI_E" Relationship="Model.FK_Videocard_PCI_E" FromRole="Videocard" ToRole="PCI_E" />
+          <NavigationProperty Name="TypeOfMemory" Relationship="Model.FK_Videocard_TypeOfMemory" FromRole="Videocard" ToRole="TypeOfMemory" />
+          <NavigationProperty Name="VideoRam" Relationship="Model.FK_Videocard_VideoRam" FromRole="Videocard" ToRole="VideoRam" />
+        </EntityType>
+        <EntityType Name="VideoRam">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="Int32" />
+          <NavigationProperty Name="Videocard" Relationship="Model.FK_Videocard_VideoRam" FromRole="VideoRam" ToRole="Videocard" />
+        </EntityType>
+        <EntityType Name="FormFactor">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MotherBoard" Relationship="Model.FK_FormFactor_MotherBoard" FromRole="FormFactor" ToRole="MotherBoard" />
+          <NavigationProperty Name="TowerPC" Relationship="Model.FK_FormFactor_TowerPC" FromRole="FormFactor" ToRole="TowerPC" />
+        </EntityType>
+        <EntityType Name="Position">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="Model.FK_Position_User" FromRole="Position" ToRole="User" />
+        </EntityType>
+        <EntityType Name="configpc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SaleDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="configpc1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SaleDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="configpc2">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SaleDate" Type="DateTime" Precision="3" />
+          <Property Name="Nickname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_MotherBoard_Chipset">
+          <End Type="Model.Chipset" Role="Chipset" Multiplicity="0..1" />
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Chipset">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="ChipsetID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_ClockSpeed">
+          <End Type="Model.ClockSpeed" Role="ClockSpeed" Multiplicity="0..1" />
+          <End Type="Model.Ram" Role="Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClockSpeed">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="ClockSpeedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_Color">
+          <End Type="Model.Color" Role="Color" Multiplicity="0..1" />
+          <End Type="Model.TowerPC" Role="TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Color">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="ColorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_Connector">
+          <End Type="Model.Conector" Role="Conector" Multiplicity="0..1" />
+          <End Type="Model.DataStorage" Role="DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Conector">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="ConnectorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_ConectorCPU">
+          <End Type="Model.ConectorCPU" Role="ConectorCPU" Multiplicity="0..1" />
+          <End Type="Model.PowerSupply" Role="PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ConectorCPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="ConectorCPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CoolingProcessor_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.CoolingProcessor" Role="CoolingProcessor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CoolingProcessor">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CoolingProcessor_TypeCooling">
+          <End Type="Model.TypeCooling" Role="TypeCooling" Multiplicity="0..1" />
+          <End Type="Model.CoolingProcessor" Role="CoolingProcessor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeCooling">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CoolingProcessor">
+              <PropertyRef Name="TypeCoolingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_CoolingProcessor">
+          <End Type="Model.CoolingProcessor" Role="CoolingProcessor" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CoolingProcessor">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="CoolingProcessorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_CpuFamilyID">
+          <End Type="Model.CpuFamilyID" Role="CpuFamilyID" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CpuFamilyID">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="CPUFamilyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_InternalStorage">
+          <End Type="Model.InternalStorage" Role="InternalStorage" Multiplicity="0..1" />
+          <End Type="Model.DataStorage" Role="DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="InternalStorage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="InternalStorageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.DataStorage" Role="DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DataStorage_SpeedOfReading">
+          <End Type="Model.SpeedOfReading" Role="SpeedOfReading" Multiplicity="0..1" />
+          <End Type="Model.DataStorage" Role="DataStorage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SpeedOfReading">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DataStorage">
+              <PropertyRef Name="SpeedOfReadingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_DataStorage">
+          <End Type="Model.DataStorage" Role="DataStorage" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DataStorage">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="DataStorageID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_GenerationCPU">
+          <End Type="Model.GenerationCPU" Role="GenerationCPU" Multiplicity="0..1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GenerationCPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="GenerationCPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_GPU">
+          <End Type="Model.GPU" Role="GPU" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="GPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.PowerSupply" Role="PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.Ram" Role="Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.TowerPC" Role="TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_Manufacturer">
+          <End Type="Model.Manufacturer" Role="Manufacturer" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Manufacturer">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="ManufacturerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_ManufacturerGPU">
+          <End Type="Model.ManufacturerGPU" Role="ManufacturerGPU" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerGPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="ManufacturerGPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_ManufacturerGPU">
+          <End Type="Model.ManufacturerGPU" Role="ManufacturerGPU" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManufacturerGPU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="ManufacturerGPUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_MemoryBusWidth">
+          <End Type="Model.MemoryBusWidth" Role="MemoryBusWidth" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemoryBusWidth">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="MemoryBusWidthID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormFactor_MotherBoard">
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="1" />
+          <End Type="Model.FormFactor" Role="FormFactor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="MotherBoard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FormFactor">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_PCI_E">
+          <End Type="Model.PCI_E" Role="PCI_E" Multiplicity="0..1" />
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PCI_E">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="PCI_E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_Socket">
+          <End Type="Model.Socket" Role="Socket" Multiplicity="0..1" />
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Socket">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="SocketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MotherBoard_TypeOfMemory">
+          <End Type="Model.TypeOfMemory" Role="TypeOfMemory" Multiplicity="0..1" />
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="MotherBoard">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_MotherBoard">
+          <End Type="Model.MotherBoard" Role="MotherBoard" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MotherBoard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="MotherBoardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_PowerSupply">
+          <End Type="Model.PowerSupply" Role="PowerSupply" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PowerSupply">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="PowerSupplyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Processor">
+          <End Type="Model.Processor" Role="Processor" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Processor">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="ProcessorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Ram">
+          <End Type="Model.Ram" Role="Ram" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ram">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="RamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_TowerPC">
+          <End Type="Model.TowerPC" Role="TowerPC" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TowerPC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="TowerPCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PC_Videocard">
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="0..1" />
+          <End Type="Model.PC" Role="PC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Videocard">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PC">
+              <PropertyRef Name="VideocardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PCCost_PC">
+          <End Type="Model.PC" Role="PC" Multiplicity="1" />
+          <End Type="Model.PCCost" Role="PCCost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PCCost">
+              <PropertyRef Name="PCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_PC">
+          <End Type="Model.PC" Role="PC" Multiplicity="0..1" />
+          <End Type="Model.Service" Role="Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="PCID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_PCI_E">
+          <End Type="Model.PCI_E" Role="PCI_E" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PCI_E">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="PCI_E_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PowerSupply_Power">
+          <End Type="Model.Power" Role="Power" Multiplicity="0..1" />
+          <End Type="Model.PowerSupply" Role="PowerSupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Power">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="PowerSupply">
+              <PropertyRef Name="PowerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_ProcessorFrequency">
+          <End Type="Model.ProcessorFrequency" Role="ProcessorFrequency" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProcessorFrequency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="ProcessorFrequencyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_QuantityCore">
+          <End Type="Model.QuantityCore" Role="QuantityCore" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="QuantityCore">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="QuantityCoreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_Socket">
+          <End Type="Model.Socket" Role="Socket" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Socket">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="SocketID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Processor_TypeOfMemory">
+          <End Type="Model.TypeOfMemory" Role="TypeOfMemory" Multiplicity="1" />
+          <End Type="Model.Processor" Role="Processor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Processor">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ram_TypeOfMemory">
+          <End Type="Model.TypeOfMemory" Role="TypeOfMemory" Multiplicity="0..1" />
+          <End Type="Model.Ram" Role="Ram" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Ram">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Service_User">
+          <End Type="Model.User" Role="User" Multiplicity="0..1" />
+          <End Type="Model.Service" Role="Service" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Service">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FormFactor_TowerPC">
+          <End Type="Model.TowerPC" Role="TowerPC" Multiplicity="1" />
+          <End Type="Model.FormFactor" Role="FormFactor" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="TowerPC">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="FormFactor">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TowerPC_TypeTower">
+          <End Type="Model.TypeTower" Role="TypeTower" Multiplicity="0..1" />
+          <End Type="Model.TowerPC" Role="TowerPC" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeTower">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="TowerPC">
+              <PropertyRef Name="TypeTowerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_TypeOfMemory">
+          <End Type="Model.TypeOfMemory" Role="TypeOfMemory" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeOfMemory">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="TypeOfMemoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Position_User">
+          <End Type="Model.User" Role="User" Multiplicity="1" />
+          <End Type="Model.Position" Role="Position" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Position">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videocard_VideoRam">
+          <End Type="Model.VideoRam" Role="VideoRam" Multiplicity="0..1" />
+          <End Type="Model.Videocard" Role="Videocard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VideoRam">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Videocard">
+              <PropertyRef Name="VideoRamID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+          <FunctionImportMapping FunctionImportName="GetComponentsByCategory" FunctionName="Хранилище Model.GetComponentsByCategory">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.GetComponentsByCategory_Result">
+                <ScalarProperty Name="Assembly" ColumnName="Assembly" />
+                <ScalarProperty Name="Processor" ColumnName="Processor" />
+                <ScalarProperty Name="MotherBoard" ColumnName="MotherBoard" />
+                <ScalarProperty Name="Tower" ColumnName="Tower" />
+                <ScalarProperty Name="Videocard" ColumnName="Videocard" />
+                <ScalarProperty Name="CoolingProcessor" ColumnName="CoolingProcessor" />
+                <ScalarProperty Name="Ram" ColumnName="Ram" />
+                <ScalarProperty Name="DataStorage" ColumnName="DataStorage" />
+                <ScalarProperty Name="PowerSupply" ColumnName="PowerSupply" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PR_InfoOnAssNum" FunctionName="Хранилище Model.PR_InfoOnAssNum">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.PR_InfoOnAssNum_Result">
+                <ScalarProperty Name="Assembly" ColumnName="Assembly" />
+                <ScalarProperty Name="Processor" ColumnName="Processor" />
+                <ScalarProperty Name="MotherBoard" ColumnName="MotherBoard" />
+                <ScalarProperty Name="Tower" ColumnName="Tower" />
+                <ScalarProperty Name="Videocard" ColumnName="Videocard" />
+                <ScalarProperty Name="CoolingProcessor" ColumnName="CoolingProcessor" />
+                <ScalarProperty Name="Ram" ColumnName="Ram" />
+                <ScalarProperty Name="DataStorage" ColumnName="DataStorage" />
+                <ScalarProperty Name="PowerSupply" ColumnName="PowerSupply" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Model.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Model.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Model.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Model.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Model.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="Model.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Model.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Model.sp_upgraddiagrams" />
+          <EntitySetMapping Name="Chipset">
+            <EntityTypeMapping TypeName="Model.Chipset">
+              <MappingFragment StoreEntitySet="Chipset">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClockSpeed">
+            <EntityTypeMapping TypeName="Model.ClockSpeed">
+              <MappingFragment StoreEntitySet="ClockSpeed">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Color">
+            <EntityTypeMapping TypeName="Model.Color">
+              <MappingFragment StoreEntitySet="Color">
+                <ScalarProperty Name="TitleColor" ColumnName="TitleColor" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Conector">
+            <EntityTypeMapping TypeName="Model.Conector">
+              <MappingFragment StoreEntitySet="Conector">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConectorCPU">
+            <EntityTypeMapping TypeName="Model.ConectorCPU">
+              <MappingFragment StoreEntitySet="ConectorCPU">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CoolingProcessor">
+            <EntityTypeMapping TypeName="Model.CoolingProcessor">
+              <MappingFragment StoreEntitySet="CoolingProcessor">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="CoolerQuantity_SectionRadiator" ColumnName="CoolerQuantity_SectionRadiator" />
+                <ScalarProperty Name="TypeCoolingID" ColumnName="TypeCoolingID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CpuFamilyID">
+            <EntityTypeMapping TypeName="Model.CpuFamilyID">
+              <MappingFragment StoreEntitySet="CpuFamilyID">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DataStorage">
+            <EntityTypeMapping TypeName="Model.DataStorage">
+              <MappingFragment StoreEntitySet="DataStorage">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="ConnectorID" ColumnName="ConnectorID" />
+                <ScalarProperty Name="SpeedOfReadingID" ColumnName="SpeedOfReadingID" />
+                <ScalarProperty Name="InternalStorageID" ColumnName="InternalStorageID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GenerationCPU">
+            <EntityTypeMapping TypeName="Model.GenerationCPU">
+              <MappingFragment StoreEntitySet="GenerationCPU">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GPU">
+            <EntityTypeMapping TypeName="Model.GPU">
+              <MappingFragment StoreEntitySet="GPU">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InternalStorage">
+            <EntityTypeMapping TypeName="Model.InternalStorage">
+              <MappingFragment StoreEntitySet="InternalStorage">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Manufacturer">
+            <EntityTypeMapping TypeName="Model.Manufacturer">
+              <MappingFragment StoreEntitySet="Manufacturer">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManufacturerGPU">
+            <EntityTypeMapping TypeName="Model.ManufacturerGPU">
+              <MappingFragment StoreEntitySet="ManufacturerGPU">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MemoryBusWidth">
+            <EntityTypeMapping TypeName="Model.MemoryBusWidth">
+              <MappingFragment StoreEntitySet="MemoryBusWidth">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MotherBoard">
+            <EntityTypeMapping TypeName="Model.MotherBoard">
+              <MappingFragment StoreEntitySet="MotherBoard">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="FormFactorID" ColumnName="FormFactorID" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="PCI_E_ID" ColumnName="PCI-E_ID" />
+                <ScalarProperty Name="SocketID" ColumnName="SocketID" />
+                <ScalarProperty Name="ChipsetID" ColumnName="ChipsetID" />
+                <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PC">
+            <EntityTypeMapping TypeName="Model.PC">
+              <MappingFragment StoreEntitySet="PC">
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="PowerSupplyID" ColumnName="PowerSupplyID" />
+                <ScalarProperty Name="DataStorageID" ColumnName="DataStorageID" />
+                <ScalarProperty Name="RamID" ColumnName="RamID" />
+                <ScalarProperty Name="CoolingProcessorID" ColumnName="CoolingProcessorID" />
+                <ScalarProperty Name="VideocardID" ColumnName="VideocardID" />
+                <ScalarProperty Name="TowerPCID" ColumnName="TowerPCID" />
+                <ScalarProperty Name="MotherBoardID" ColumnName="MotherBoardID" />
+                <ScalarProperty Name="ProcessorID" ColumnName="ProcessorID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PCCost">
+            <EntityTypeMapping TypeName="Model.PCCost">
+              <MappingFragment StoreEntitySet="PCCost">
+                <ScalarProperty Name="PCID" ColumnName="PCID" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PCI_E">
+            <EntityTypeMapping TypeName="Model.PCI_E">
+              <MappingFragment StoreEntitySet="PCI-E">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Power">
+            <EntityTypeMapping TypeName="Model.Power">
+              <MappingFragment StoreEntitySet="Power">
+                <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PowerSupply">
+            <EntityTypeMapping TypeName="Model.PowerSupply">
+              <MappingFragment StoreEntitySet="PowerSupply">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="ConectorCPUID" ColumnName="ConectorCPUID" />
+                <ScalarProperty Name="PowerID" ColumnName="PowerID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Processor">
+            <EntityTypeMapping TypeName="Model.Processor">
+              <MappingFragment StoreEntitySet="Processor">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerGPUID" ColumnName="ManufacturerGPUID" />
+                <ScalarProperty Name="QuantityCoreID" ColumnName="QuantityCoreID" />
+                <ScalarProperty Name="GenerationCPUID" ColumnName="GenerationCPUID" />
+                <ScalarProperty Name="ProcessorFrequencyID" ColumnName="ProcessorFrequencyID" />
+                <ScalarProperty Name="GraphicsCore" ColumnName="GraphicsCore" />
+                <ScalarProperty Name="CPUFamilyID" ColumnName="CPUFamilyID" />
+                <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+                <ScalarProperty Name="SocketID" ColumnName="SocketID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProcessorFrequency">
+            <EntityTypeMapping TypeName="Model.ProcessorFrequency">
+              <MappingFragment StoreEntitySet="ProcessorFrequency">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="QuantityCore">
+            <EntityTypeMapping TypeName="Model.QuantityCore">
+              <MappingFragment StoreEntitySet="QuantityCore">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ram">
+            <EntityTypeMapping TypeName="Model.Ram">
+              <MappingFragment StoreEntitySet="Ram">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="ClockSpeedID" ColumnName="ClockSpeedID" />
+                <ScalarProperty Name="QuantityRam" ColumnName="QuantityRam" />
+                <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Service">
+            <EntityTypeMapping TypeName="Model.Service">
+              <MappingFragment StoreEntitySet="Service">
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="PCID" ColumnName="PCID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Socket">
+            <EntityTypeMapping TypeName="Model.Socket">
+              <MappingFragment StoreEntitySet="Socket">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SpeedOfReading">
+            <EntityTypeMapping TypeName="Model.SpeedOfReading">
+              <MappingFragment StoreEntitySet="SpeedOfReading">
+                <ScalarProperty Name="Speed" ColumnName="Speed" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TowerPC">
+            <EntityTypeMapping TypeName="Model.TowerPC">
+              <MappingFragment StoreEntitySet="TowerPC">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="FormFactorID" ColumnName="FormFactorID" />
+                <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="TypeTowerID" ColumnName="TypeTowerID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeCooling">
+            <EntityTypeMapping TypeName="Model.TypeCooling">
+              <MappingFragment StoreEntitySet="TypeCooling">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeOfMemory">
+            <EntityTypeMapping TypeName="Model.TypeOfMemory">
+              <MappingFragment StoreEntitySet="TypeOfMemory">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeTower">
+            <EntityTypeMapping TypeName="Model.TypeTower">
+              <MappingFragment StoreEntitySet="TypeTower">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="Model.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videocard">
+            <EntityTypeMapping TypeName="Model.Videocard">
+              <MappingFragment StoreEntitySet="Videocard">
+                <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+                <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+                <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+                <ScalarProperty Name="PCI_E_ID" ColumnName="PCI-E_ID" />
+                <ScalarProperty Name="MemoryBusWidthID" ColumnName="MemoryBusWidthID" />
+                <ScalarProperty Name="QuantityVentilator" ColumnName="QuantityVentilator" />
+                <ScalarProperty Name="ManufacturerGPUID" ColumnName="ManufacturerGPUID" />
+                <ScalarProperty Name="GPUID" ColumnName="GPUID" />
+                <ScalarProperty Name="VideoRamID" ColumnName="VideoRamID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VideoRam">
+            <EntityTypeMapping TypeName="Model.VideoRam">
+              <MappingFragment StoreEntitySet="VideoRam">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormFactor">
+            <EntityTypeMapping TypeName="Model.FormFactor">
+              <MappingFragment StoreEntitySet="FormFactor">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Position">
+            <EntityTypeMapping TypeName="Model.Position">
+              <MappingFragment StoreEntitySet="Position">
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="configpc">
+            <EntityTypeMapping TypeName="Model.configpc">
+              <MappingFragment StoreEntitySet="configpc">
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="configpc1">
+            <EntityTypeMapping TypeName="Model.configpc1">
+              <MappingFragment StoreEntitySet="configpc1">
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="configpc2">
+            <EntityTypeMapping TypeName="Model.configpc2">
+              <MappingFragment StoreEntitySet="configpc2">
+                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+                <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

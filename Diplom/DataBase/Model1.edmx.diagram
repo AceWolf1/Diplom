@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1dd90b6d942d4a729aa45262dcc01323" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="Model.Chipset" Width="1.5" PointX="6.75" PointY="39.125" />
+        <EntityTypeShape EntityType="Model.ClockSpeed" Width="1.5" PointX="3.75" PointY="32.125" />
+        <EntityTypeShape EntityType="Model.Color" Width="1.5" PointX="3.75" PointY="29.375" />
+        <EntityTypeShape EntityType="Model.Conector" Width="1.5" PointX="3.75" PointY="4.5" />
+        <EntityTypeShape EntityType="Model.ConectorCPU" Width="1.5" PointX="0.75" PointY="26" />
+        <EntityTypeShape EntityType="Model.CoolingProcessor" Width="1.5" PointX="3" PointY="12.375" />
+        <EntityTypeShape EntityType="Model.CpuFamilyID" Width="1.5" PointX="6.75" PointY="31.375" />
+        <EntityTypeShape EntityType="Model.DataStorage" Width="1.5" PointX="6" PointY="12.125" />
+        <EntityTypeShape EntityType="Model.GenerationCPU" Width="1.5" PointX="6.75" PointY="26.75" />
+        <EntityTypeShape EntityType="Model.GPU" Width="1.5" PointX="0.75" PointY="21.125" />
+        <EntityTypeShape EntityType="Model.InternalStorage" Width="1.5" PointX="3.75" PointY="9.875" />
+        <EntityTypeShape EntityType="Model.Manufacturer" Width="1.5" PointX="0.75" PointY="17.625" />
+        <EntityTypeShape EntityType="Model.ManufacturerGPU" Width="1.5" PointX="6.75" PointY="36.125" />
+        <EntityTypeShape EntityType="Model.MemoryBusWidth" Width="1.5" PointX="0.75" PointY="23.5" />
+        <EntityTypeShape EntityType="Model.MotherBoard" Width="1.5" PointX="9" PointY="16.75" />
+        <EntityTypeShape EntityType="Model.PC" Width="1.5" PointX="11.25" PointY="16.375" />
+        <EntityTypeShape EntityType="Model.PCCost" Width="1.5" PointX="13.5" PointY="21" />
+        <EntityTypeShape EntityType="Model.PCI_E" Width="1.5" PointX="6.75" PointY="9.125" />
+        <EntityTypeShape EntityType="Model.Power" Width="1.5" PointX="0.75" PointY="28.375" />
+        <EntityTypeShape EntityType="Model.PowerSupply" Width="1.5" PointX="3" PointY="22.375" />
+        <EntityTypeShape EntityType="Model.Processor" Width="1.5" PointX="9" PointY="29.75" />
+        <EntityTypeShape EntityType="Model.ProcessorFrequency" Width="1.5" PointX="6.75" PointY="33.75" />
+        <EntityTypeShape EntityType="Model.QuantityCore" Width="1.5" PointX="6.75" PointY="29.125" />
+        <EntityTypeShape EntityType="Model.Ram" Width="1.5" PointX="6" PointY="22.25" />
+        <EntityTypeShape EntityType="Model.Service" Width="1.5" PointX="13.5" PointY="14.875" />
+        <EntityTypeShape EntityType="Model.Socket" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Model.SpeedOfReading" Width="1.5" PointX="3.75" PointY="7.125" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.TowerPC" Width="1.5" PointX="6" PointY="17.25" />
+        <EntityTypeShape EntityType="Model.TypeCooling" Width="1.5" PointX="0.75" PointY="13.125" />
+        <EntityTypeShape EntityType="Model.TypeOfMemory" Width="1.5" PointX="6.75" PointY="2.25" />
+        <EntityTypeShape EntityType="Model.TypeTower" Width="1.5" PointX="3.75" PointY="27" />
+        <EntityTypeShape EntityType="Model.User" Width="1.5" PointX="11.25" PointY="12.5" />
+        <EntityTypeShape EntityType="Model.Videocard" Width="1.5" PointX="3" PointY="16.375" />
+        <EntityTypeShape EntityType="Model.VideoRam" Width="1.5" PointX="0.75" PointY="10.875" />
+        <EntityTypeShape EntityType="Model.FormFactor" Width="1.5" PointX="14.25" PointY="18.125" />
+        <EntityTypeShape EntityType="Model.Position" Width="1.5" PointX="13.5" PointY="12.125" />
+        <EntityTypeShape EntityType="Model.configpc" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.configpc1" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.configpc2" Width="1.5" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="Model.FK_MotherBoard_Chipset" />
+        <AssociationConnector Association="Model.FK_Ram_ClockSpeed" />
+        <AssociationConnector Association="Model.FK_TowerPC_Color" />
+        <AssociationConnector Association="Model.FK_DataStorage_Connector" />
+        <AssociationConnector Association="Model.FK_PowerSupply_ConectorCPU" />
+        <AssociationConnector Association="Model.FK_CoolingProcessor_Manufacturer" />
+        <AssociationConnector Association="Model.FK_CoolingProcessor_TypeCooling" />
+        <AssociationConnector Association="Model.FK_PC_CoolingProcessor" />
+        <AssociationConnector Association="Model.FK_Processor_CpuFamilyID" />
+        <AssociationConnector Association="Model.FK_DataStorage_InternalStorage" />
+        <AssociationConnector Association="Model.FK_DataStorage_Manufacturer" />
+        <AssociationConnector Association="Model.FK_DataStorage_SpeedOfReading" />
+        <AssociationConnector Association="Model.FK_PC_DataStorage" />
+        <AssociationConnector Association="Model.FK_Processor_GenerationCPU" />
+        <AssociationConnector Association="Model.FK_Videocard_GPU" />
+        <AssociationConnector Association="Model.FK_MotherBoard_Manufacturer" />
+        <AssociationConnector Association="Model.FK_PowerSupply_Manufacturer" />
+        <AssociationConnector Association="Model.FK_Ram_Manufacturer" />
+        <AssociationConnector Association="Model.FK_TowerPC_Manufacturer" />
+        <AssociationConnector Association="Model.FK_Videocard_Manufacturer" />
+        <AssociationConnector Association="Model.FK_Processor_ManufacturerGPU" />
+        <AssociationConnector Association="Model.FK_Videocard_ManufacturerGPU" />
+        <AssociationConnector Association="Model.FK_Videocard_MemoryBusWidth" />
+        <AssociationConnector Association="Model.FK_FormFactor_MotherBoard" />
+        <AssociationConnector Association="Model.FK_MotherBoard_PCI_E" />
+        <AssociationConnector Association="Model.FK_MotherBoard_Socket" />
+        <AssociationConnector Association="Model.FK_MotherBoard_TypeOfMemory" />
+        <AssociationConnector Association="Model.FK_PC_MotherBoard" />
+        <AssociationConnector Association="Model.FK_PC_PowerSupply" />
+        <AssociationConnector Association="Model.FK_PC_Processor" />
+        <AssociationConnector Association="Model.FK_PC_Ram" />
+        <AssociationConnector Association="Model.FK_PC_TowerPC" />
+        <AssociationConnector Association="Model.FK_PC_Videocard" />
+        <AssociationConnector Association="Model.FK_PCCost_PC" />
+        <AssociationConnector Association="Model.FK_Service_PC" />
+        <AssociationConnector Association="Model.FK_Videocard_PCI_E" />
+        <AssociationConnector Association="Model.FK_PowerSupply_Power" />
+        <AssociationConnector Association="Model.FK_Processor_ProcessorFrequency" />
+        <AssociationConnector Association="Model.FK_Processor_QuantityCore" />
+        <AssociationConnector Association="Model.FK_Processor_Socket" />
+        <AssociationConnector Association="Model.FK_Processor_TypeOfMemory" />
+        <AssociationConnector Association="Model.FK_Ram_TypeOfMemory" />
+        <AssociationConnector Association="Model.FK_Service_User" />
+        <AssociationConnector Association="Model.FK_FormFactor_TowerPC" />
+        <AssociationConnector Association="Model.FK_TowerPC_TypeTower" />
+        <AssociationConnector Association="Model.FK_Videocard_TypeOfMemory" />
+        <AssociationConnector Association="Model.FK_Position_User" />
+        <AssociationConnector Association="Model.FK_Videocard_VideoRam" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

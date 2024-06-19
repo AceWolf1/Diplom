@@ -1,0 +1,210 @@
+﻿<Window x:Class="Diplom.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="680" Width="1300"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None">
+    <Border CornerRadius="30"
+      Background="#EEA83B">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="200*"/>
+                <RowDefinition Height="40"/>
+
+            </Grid.RowDefinitions>
+            <Border Width="1300" Grid.Row="1" Background="#FF79AF47" BorderBrush="Transparent" BorderThickness="1" CornerRadius="30">
+                <StackPanel Grid.Row="1" Width="auto"  Background="#FF79AF47" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal" >
+                        <RadioButton x:Name="BtnVideoCardMainWindow"
+                          Click="BtnVideoCardMainWindow_Click"
+                          Style="{StaticResource menuButton}" 
+                          >
+                            <StackPanel Orientation="Horizontal">
+
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\videocard.png"/>
+                                <TextBlock Text="Видеокарта"
+                                           FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Margin="10,0,0,0"
+                                 Width="70"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="BtnProcMainWindow"
+                           Click="BtnProcMainWindow_Click"
+                           Style="{StaticResource menuButton}" 
+                           >
+                            <StackPanel  Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\Proc.png"/>
+                                <TextBlock Text="Процессор"
+                                           FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Margin="10,0,0,0"
+                                 Width="70"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="MotherBoardMainWindow"
+                           Click="MotherBoardMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel  Orientation="Horizontal" >
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\Motherboard1.png"/>
+                                <TextBlock   TextWrapping="Wrap"
+                                   Text="Материнская плата"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   Foreground="Black"
+                                   Width="73"
+                                   Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="RamMainWindow"
+                           Click="RamMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\ram11.png"/>
+                                <TextBlock TextWrapping="Wrap"
+                                 Text="Оперативная память"
+                                 FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Width="80"
+                                 Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="HardWareMainWindow"
+                           Click="HardWareMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\hardware.png"/>
+                                <TextBlock TextWrapping="Wrap"
+                                 Text="Жесткие диски" 
+                                 FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Width="73"
+                                 Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="CoolingMainWindow"
+                           Click="CoolingMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\Cooling1.png"/>
+                                <TextBlock TextWrapping="Wrap"
+                                 Text="Охлаждение процессора"
+                                 FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Width="80"
+                                 Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="PowerSupplyMainWindow"
+                           Click="PowerSupplyMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\PowerSuplly1.png"/>
+                                <TextBlock TextWrapping="Wrap"
+                                 Text="Блок питания"
+                                 FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Width="73"
+                                 Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="TowerPCMainWindow"
+                           Click="TowerPCMainWindow_Click"
+                           Style="{StaticResource menuButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Height="50" Source="C:\Users\sanya\source\repos\Diplom\Diplom\Rec\Images\Icons\TowerPC.png"/>
+                                <TextBlock Text="Корпус"
+                                           FontWeight="Bold"
+                                 VerticalAlignment="Center"
+                                 Foreground="Black"
+                                 Width="60"
+                                 Margin="10,0,0,0"/>
+                            </StackPanel>
+                        </RadioButton>
+
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <StackPanel x:Name="pnlControlBar"
+                  Grid.Row="0"
+                  Orientation="Horizontal"
+                  FlowDirection="RightToLeft"
+                  Background="Transparent"
+                  Margin="0 0 5 0"
+                  MouseLeftButtonDown="pnlControlBar_MouseLeftButtonDown">
+                <Button x:Name="BtnClose"
+                  Content="✕"
+                  BorderThickness="0"
+                  FontSize="20"
+                  Background="Transparent"
+                  FontFamily="Roboto"
+                  Cursor="Hand"
+                  Margin="10 0 0 0"
+                  Grid.Column="2"
+                  Click="BtnClose_Click"
+                  Style="{StaticResource secondaryButton}"/>
+                <Button x:Name="BtnMaximize"
+                  Content="▢"
+                  BorderThickness="0"
+                  FontSize="20"
+                  Background="Transparent"
+                  FontFamily="Roboto"
+                  Margin="10 0 0 0"
+                  Cursor="Hand"
+                  Grid.Column="2"
+                  Click="BtnMaximize_Click"
+                  Style="{StaticResource secondaryButton}"/>
+                <Button x:Name="BtnMinimize"
+                  Content="─"
+                  BorderThickness="0"
+                  Background="Transparent"
+                  FontSize="20"
+                  Margin="10 0 0 0"
+                  FontFamily="Roboto"
+                  Cursor="Hand"
+                  Grid.Column="1"
+                  Click="BtnMinimize_Click"
+                  Style="{StaticResource secondaryButton}"/>
+            </StackPanel>
+
+            <Border Grid.Row="2" CornerRadius="30"
+                    Background="White"
+                    Margin="25">
+                <Frame x:Name="WindowsFrame"
+                       Margin="20"
+                       NavigationUIVisibility="Hidden"/>
+            </Border>
+            <Button Grid.Row="3"
+                    FontWeight="Bold"
+                    Content="Корзина"
+                    x:Name="BtnCart"
+                    Width="100"
+                    HorizontalAlignment="Right"
+                    Background="#FF79AF47"
+                    Margin="0,0,30,0"
+                    Click="BtnCart_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+
+        </Grid>
+    </Border>
+</Window>

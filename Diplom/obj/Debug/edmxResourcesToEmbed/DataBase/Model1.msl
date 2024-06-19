@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities">
+    <FunctionImportMapping FunctionImportName="GetComponentsByCategory" FunctionName="Хранилище Model.GetComponentsByCategory">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.GetComponentsByCategory_Result">
+          <ScalarProperty Name="Assembly" ColumnName="Assembly" />
+          <ScalarProperty Name="Processor" ColumnName="Processor" />
+          <ScalarProperty Name="MotherBoard" ColumnName="MotherBoard" />
+          <ScalarProperty Name="Tower" ColumnName="Tower" />
+          <ScalarProperty Name="Videocard" ColumnName="Videocard" />
+          <ScalarProperty Name="CoolingProcessor" ColumnName="CoolingProcessor" />
+          <ScalarProperty Name="Ram" ColumnName="Ram" />
+          <ScalarProperty Name="DataStorage" ColumnName="DataStorage" />
+          <ScalarProperty Name="PowerSupply" ColumnName="PowerSupply" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PR_InfoOnAssNum" FunctionName="Хранилище Model.PR_InfoOnAssNum">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.PR_InfoOnAssNum_Result">
+          <ScalarProperty Name="Assembly" ColumnName="Assembly" />
+          <ScalarProperty Name="Processor" ColumnName="Processor" />
+          <ScalarProperty Name="MotherBoard" ColumnName="MotherBoard" />
+          <ScalarProperty Name="Tower" ColumnName="Tower" />
+          <ScalarProperty Name="Videocard" ColumnName="Videocard" />
+          <ScalarProperty Name="CoolingProcessor" ColumnName="CoolingProcessor" />
+          <ScalarProperty Name="Ram" ColumnName="Ram" />
+          <ScalarProperty Name="DataStorage" ColumnName="DataStorage" />
+          <ScalarProperty Name="PowerSupply" ColumnName="PowerSupply" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="Хранилище Model.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="Хранилище Model.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="Хранилище Model.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="Хранилище Model.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="Хранилище Model.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="Хранилище Model.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="Хранилище Model.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Chipset">
+      <EntityTypeMapping TypeName="Model.Chipset">
+        <MappingFragment StoreEntitySet="Chipset">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ClockSpeed">
+      <EntityTypeMapping TypeName="Model.ClockSpeed">
+        <MappingFragment StoreEntitySet="ClockSpeed">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Color">
+      <EntityTypeMapping TypeName="Model.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="TitleColor" ColumnName="TitleColor" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conector">
+      <EntityTypeMapping TypeName="Model.Conector">
+        <MappingFragment StoreEntitySet="Conector">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConectorCPU">
+      <EntityTypeMapping TypeName="Model.ConectorCPU">
+        <MappingFragment StoreEntitySet="ConectorCPU">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoolingProcessor">
+      <EntityTypeMapping TypeName="Model.CoolingProcessor">
+        <MappingFragment StoreEntitySet="CoolingProcessor">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="CoolerQuantity_SectionRadiator" ColumnName="CoolerQuantity_SectionRadiator" />
+          <ScalarProperty Name="TypeCoolingID" ColumnName="TypeCoolingID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CpuFamilyID">
+      <EntityTypeMapping TypeName="Model.CpuFamilyID">
+        <MappingFragment StoreEntitySet="CpuFamilyID">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DataStorage">
+      <EntityTypeMapping TypeName="Model.DataStorage">
+        <MappingFragment StoreEntitySet="DataStorage">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ConnectorID" ColumnName="ConnectorID" />
+          <ScalarProperty Name="SpeedOfReadingID" ColumnName="SpeedOfReadingID" />
+          <ScalarProperty Name="InternalStorageID" ColumnName="InternalStorageID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GenerationCPU">
+      <EntityTypeMapping TypeName="Model.GenerationCPU">
+        <MappingFragment StoreEntitySet="GenerationCPU">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GPU">
+      <EntityTypeMapping TypeName="Model.GPU">
+        <MappingFragment StoreEntitySet="GPU">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InternalStorage">
+      <EntityTypeMapping TypeName="Model.InternalStorage">
+        <MappingFragment StoreEntitySet="InternalStorage">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturer">
+      <EntityTypeMapping TypeName="Model.Manufacturer">
+        <MappingFragment StoreEntitySet="Manufacturer">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManufacturerGPU">
+      <EntityTypeMapping TypeName="Model.ManufacturerGPU">
+        <MappingFragment StoreEntitySet="ManufacturerGPU">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MemoryBusWidth">
+      <EntityTypeMapping TypeName="Model.MemoryBusWidth">
+        <MappingFragment StoreEntitySet="MemoryBusWidth">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MotherBoard">
+      <EntityTypeMapping TypeName="Model.MotherBoard">
+        <MappingFragment StoreEntitySet="MotherBoard">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="FormFactorID" ColumnName="FormFactorID" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="PCI_E_ID" ColumnName="PCI-E_ID" />
+          <ScalarProperty Name="SocketID" ColumnName="SocketID" />
+          <ScalarProperty Name="ChipsetID" ColumnName="ChipsetID" />
+          <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC">
+      <EntityTypeMapping TypeName="Model.PC">
+        <MappingFragment StoreEntitySet="PC">
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="PowerSupplyID" ColumnName="PowerSupplyID" />
+          <ScalarProperty Name="DataStorageID" ColumnName="DataStorageID" />
+          <ScalarProperty Name="RamID" ColumnName="RamID" />
+          <ScalarProperty Name="CoolingProcessorID" ColumnName="CoolingProcessorID" />
+          <ScalarProperty Name="VideocardID" ColumnName="VideocardID" />
+          <ScalarProperty Name="TowerPCID" ColumnName="TowerPCID" />
+          <ScalarProperty Name="MotherBoardID" ColumnName="MotherBoardID" />
+          <ScalarProperty Name="ProcessorID" ColumnName="ProcessorID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PCCost">
+      <EntityTypeMapping TypeName="Model.PCCost">
+        <MappingFragment StoreEntitySet="PCCost">
+          <ScalarProperty Name="PCID" ColumnName="PCID" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PCI_E">
+      <EntityTypeMapping TypeName="Model.PCI_E">
+        <MappingFragment StoreEntitySet="PCI-E">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Power">
+      <EntityTypeMapping TypeName="Model.Power">
+        <MappingFragment StoreEntitySet="Power">
+          <ScalarProperty Name="PowerQuantity" ColumnName="PowerQuantity" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PowerSupply">
+      <EntityTypeMapping TypeName="Model.PowerSupply">
+        <MappingFragment StoreEntitySet="PowerSupply">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ConectorCPUID" ColumnName="ConectorCPUID" />
+          <ScalarProperty Name="PowerID" ColumnName="PowerID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Processor">
+      <EntityTypeMapping TypeName="Model.Processor">
+        <MappingFragment StoreEntitySet="Processor">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerGPUID" ColumnName="ManufacturerGPUID" />
+          <ScalarProperty Name="QuantityCoreID" ColumnName="QuantityCoreID" />
+          <ScalarProperty Name="GenerationCPUID" ColumnName="GenerationCPUID" />
+          <ScalarProperty Name="ProcessorFrequencyID" ColumnName="ProcessorFrequencyID" />
+          <ScalarProperty Name="GraphicsCore" ColumnName="GraphicsCore" />
+          <ScalarProperty Name="CPUFamilyID" ColumnName="CPUFamilyID" />
+          <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+          <ScalarProperty Name="SocketID" ColumnName="SocketID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProcessorFrequency">
+      <EntityTypeMapping TypeName="Model.ProcessorFrequency">
+        <MappingFragment StoreEntitySet="ProcessorFrequency">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuantityCore">
+      <EntityTypeMapping TypeName="Model.QuantityCore">
+        <MappingFragment StoreEntitySet="QuantityCore">
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ram">
+      <EntityTypeMapping TypeName="Model.Ram">
+        <MappingFragment StoreEntitySet="Ram">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="ClockSpeedID" ColumnName="ClockSpeedID" />
+          <ScalarProperty Name="QuantityRam" ColumnName="QuantityRam" />
+          <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Service">
+      <EntityTypeMapping TypeName="Model.Service">
+        <MappingFragment StoreEntitySet="Service">
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="PCID" ColumnName="PCID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Socket">
+      <EntityTypeMapping TypeName="Model.Socket">
+        <MappingFragment StoreEntitySet="Socket">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SpeedOfReading">
+      <EntityTypeMapping TypeName="Model.SpeedOfReading">
+        <MappingFragment StoreEntitySet="SpeedOfReading">
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TowerPC">
+      <EntityTypeMapping TypeName="Model.TowerPC">
+        <MappingFragment StoreEntitySet="TowerPC">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="FormFactorID" ColumnName="FormFactorID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="TypeTowerID" ColumnName="TypeTowerID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeCooling">
+      <EntityTypeMapping TypeName="Model.TypeCooling">
+        <MappingFragment StoreEntitySet="TypeCooling">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeOfMemory">
+      <EntityTypeMapping TypeName="Model.TypeOfMemory">
+        <MappingFragment StoreEntitySet="TypeOfMemory">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeTower">
+      <EntityTypeMapping TypeName="Model.TypeTower">
+        <MappingFragment StoreEntitySet="TypeTower">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+          <ScalarProperty Name="RegistrationDate" ColumnName="RegistrationDate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Videocard">
+      <EntityTypeMapping TypeName="Model.Videocard">
+        <MappingFragment StoreEntitySet="Videocard">
+          <ScalarProperty Name="PhotoLink" ColumnName="PhotoLink" />
+          <ScalarProperty Name="EnergyConsumption" ColumnName="EnergyConsumption" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="ManufacturerID" ColumnName="ManufacturerID" />
+          <ScalarProperty Name="TypeOfMemoryID" ColumnName="TypeOfMemoryID" />
+          <ScalarProperty Name="PCI_E_ID" ColumnName="PCI-E_ID" />
+          <ScalarProperty Name="MemoryBusWidthID" ColumnName="MemoryBusWidthID" />
+          <ScalarProperty Name="QuantityVentilator" ColumnName="QuantityVentilator" />
+          <ScalarProperty Name="ManufacturerGPUID" ColumnName="ManufacturerGPUID" />
+          <ScalarProperty Name="GPUID" ColumnName="GPUID" />
+          <ScalarProperty Name="VideoRamID" ColumnName="VideoRamID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VideoRam">
+      <EntityTypeMapping TypeName="Model.VideoRam">
+        <MappingFragment StoreEntitySet="VideoRam">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormFactor">
+      <EntityTypeMapping TypeName="Model.FormFactor">
+        <MappingFragment StoreEntitySet="FormFactor">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Position">
+      <EntityTypeMapping TypeName="Model.Position">
+        <MappingFragment StoreEntitySet="Position">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="configpc">
+      <EntityTypeMapping TypeName="Model.configpc">
+        <MappingFragment StoreEntitySet="configpc">
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="configpc1">
+      <EntityTypeMapping TypeName="Model.configpc1">
+        <MappingFragment StoreEntitySet="configpc1">
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="configpc2">
+      <EntityTypeMapping TypeName="Model.configpc2">
+        <MappingFragment StoreEntitySet="configpc2">
+          <ScalarProperty Name="Nickname" ColumnName="Nickname" />
+          <ScalarProperty Name="SaleDate" ColumnName="SaleDate" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,138 @@
+﻿<Window x:Class="Diplom.Components.Processor.AddProcWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom.Components.Processor"
+        mc:Ignorable="d"
+        Title="AddProcWindow" Height="850" Width="400"   
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None">
+    <Border CornerRadius="30"
+        Background="#EEA83B">
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.RowSpan="2">
+                <TextBlock Text="Processor"
+                           FontSize="28"
+                           FontWeight="Medium"
+                           FontFamily="Arial"
+                           Margin="0 20 0 0"
+                           HorizontalAlignment="Center"
+                           />
+                <StackPanel HorizontalAlignment="Center" Margin="0 20 0 20">
+                    <Border BorderBrush="Black"
+                            BorderThickness="1"
+                            Width="150"
+                            Height="150">
+                        <Image x:Name="ImgImageProcessor"/>
+                    </Border>
+                    <Button x:Name="BtnImageSearch" 
+                            Style="{StaticResource secondaryButton}"
+                            Background="Transparent"
+                            Content="Select an image"
+                            FontSize="20"
+                            HorizontalAlignment="Center"
+                            Margin="0 10 0 0" 
+                            Click ="BtnImageSearch_Click"
+                            />
+                </StackPanel>
+                <StackPanel>
+
+                    <TextBlock Text="Title"
+           HorizontalAlignment="Center"/>
+                    <TextBox x:Name="TbTitle"/>
+                    <TextBlock Text="Socket"
+                           HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbSocketID"/>
+                    <TextBlock Text="TypeOfMemory"
+           HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbTypeOfMemoryID"/>
+                    <TextBlock Text="CPUFamily"
+           HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbCPUFamilyID"/>
+                    <TextBlock Text="GraphicsCore"
+            HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbGraphicsCore"/>
+                    <TextBlock Text="ProseccorFrequency"
+            HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbProseccorFrequencyID"/>
+                    <TextBlock Text="GenerationCPU"
+            HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbGenerationCPUID"/>
+                    <TextBlock Text="QuantityCore"
+                           HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbQuantityCoreID"/>
+                    <TextBlock Text="ManufacturerGPU"
+            HorizontalAlignment="Center"/>
+                    <ComboBox x:Name="CbManufacturerGPUID"/>
+                    <TextBlock Text="Cost"
+            HorizontalAlignment="Center"/>
+                    <TextBox x:Name="TbCost"/>
+                    <TextBlock Text="EnergyConsumption"
+            HorizontalAlignment="Center"/>
+                    <TextBox x:Name="TbEnergyConsumption"/>
+
+                    <Button x:Name="AddProcessor"
+            Content="Add"
+            Click="AddProcessor_Click"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel x:Name="pnlControlBarWindow" Grid.Row="0" 
+             Orientation="Horizontal"
+             FlowDirection="RightToLeft"
+             Background="Transparent"
+             Margin="0 0 5 0"
+             MouseLeftButtonDown="pnlControlBarWindow_MouseLeftButtonDown">
+                <Button Grid.Row="0"
+             x:Name="BtnCloseProcessorWindow"
+             Content="✕"
+             BorderThickness="0"
+             FontSize="20"
+             Background="Transparent"
+             FontFamily="Roboto"
+             Cursor="Hand"
+             Margin="10 0 15 0"
+             Grid.Column="2"
+             Click="BtnCloseProcessorWindow_Click"
+             HorizontalAlignment="Right"
+             VerticalAlignment="Top"
+             Style="{StaticResource secondaryButton}"/>
+                <Button Grid.Row="0" 
+             x:Name="BtnMaximizeWindow"
+             Content="▢"
+             BorderThickness="0"
+             VerticalAlignment="Top"
+             HorizontalAlignment="Right"
+             FontSize="20"
+             Background="Transparent"
+             FontFamily="Roboto"
+             Margin="0, 0, 15, 0"
+             Cursor="Hand"
+             Grid.Column="2"
+             Click="BtnMaximizeWindow_Click"
+             Style="{StaticResource secondaryButton}"/>
+                <Button x:Name="BtnMinimizeWindow"
+             Grid.Row="0"
+             Content="─"
+             BorderThickness="0"
+             Background="Transparent"
+             VerticalAlignment="Top"
+             
+             HorizontalAlignment="Right"
+             FontSize="20"
+             Margin="0 0 0 0"
+             FontFamily="Roboto"
+             Cursor="Hand"
+             Click="BtnMinimizeWindow_Click"
+             Style="{StaticResource secondaryButton}"/>
+            </StackPanel>
+        </Grid>
+    </Border>
+</Window>
